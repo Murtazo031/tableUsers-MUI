@@ -370,7 +370,7 @@ export default function TableUser() {
             </Box>
           </Box>
           <Box sx={{display:"flex",justifyContent:"space-between", margin:"5vh"}}>
-            <Button variant="contained" color="primary" onClick={()=>handleOpenModalEdit()}><EditIcon/> Edit</Button>
+            <Button variant="contained" color="primary" onClick={()=>handleOpenModalEdit(selectedUser)}><EditIcon/> Edit</Button>
             <Button
               color="error"
               variant="outlined"
