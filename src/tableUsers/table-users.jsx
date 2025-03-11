@@ -370,7 +370,7 @@ export default function TableUser() {
             </Box>
           </Box>
           <Box sx={{display:"flex",justifyContent:"space-between", margin:"5vh"}}>
-            <Button variant="contained" color="primary" onClick={handleOpenModalEdit}><EditIcon/> Edit</Button>
+            <Button variant="contained" color="primary" onClick={()=>handleOpenModalEdit()}><EditIcon/> Edit</Button>
             <Button
               color="error"
               variant="outlined"
@@ -528,7 +528,7 @@ export default function TableUser() {
                   if (isEditing) {
                     dispatch(editUser(selectedUser));
                   } else {
-                    dispatch(addUser({ ...selectedUser, id: Date.now() })); // Генерация ID для нового юзера
+                    dispatch(addUser({ ...selectedUser, id: Date.now() }));
                   }
                   handleClose();
                 }}
